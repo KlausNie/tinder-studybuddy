@@ -1,52 +1,50 @@
 <ion-header>
-  <ion-navbar>
-    <ion-title>
-      Matches
-    </ion-title>
-  </ion-navbar>
+    <ion-navbar>
+        <ion-title>
+            Matches
+        </ion-title>
+    </ion-navbar>
 </ion-header>
 
 <ion-content padding>
 
-    <div class="list-matches">
-
-        <ion-card>
-            <ion-select [(ngModel)]="subject" value="Computer Science" (ngModelChange)="changeCourse($event)">
+    <ion-card>
+        <ion-card-content>
+            <ion-select [(ngModel)]="subject" (ngModelChange)="changeCourse($event)">
                 <ion-option value="Entrepreneurship">Entrepreneurship</ion-option>
                 <ion-option value="Machine Learning">Machine Learning</ion-option>
                 <ion-option value="Economy">Economy</ion-option>
             </ion-select>
-        </ion-card>
+        </ion-card-content>
+    </ion-card>
 
-        <ion-card *ngFor="let d of values" class="match">
-            <div class="text">
-                <div class="top">
-                    <div class="name">
-                        {{d.n}}
+    <ion-card *ngFor="let d of values" padding>
+        <ion-card-title>{{d.n}}</ion-card-title>
+        <ion-card-content>
+            <!--<ion-grid>-->
+            <ion-item>
+                {{d.d}}
+            </ion-item>
+            <ion-item>
+                Time
+                <div style="display: flex;">
+                    <div *ngFor="let i of d.time">
+                        <div class="time-cube"></div>
                     </div>
                 </div>
-                <div class="middle">
-                    {{d.d}}
-                </div>
-                <div class="bottom">
-                    <div class="time">
-                        <div class="text">Time: </div>
-                        <div *ngFor="let i of d.time">
-                            <div class="time-cube"></div>
-                        </div>
-                    </div>
-                    <div class="experience">
-                        <div class="text">Exp.: </div>
-                        <div *ngFor="let i of d.exp">
-                            <div class="time-cube"></div>
-                        </div>
+            </ion-item>
+            <ion-item>
+                Experience
+                <div style="display: flex;">
+                    <div *ngFor="let i of d.exp">
+                        <div class="time-cube"></div>
                     </div>
                 </div>
-            </div>
+            </ion-item>
             <div class="action">
                 <button ion-button color="light" (click)="click(d)">Contact</button>
             </div>
-        </ion-card>
-
-    </div>
+            <!--</ion-grid>-->
+        </ion-card-content>
+    </ion-card>
 </ion-content>

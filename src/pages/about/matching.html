@@ -11,25 +11,23 @@
 <ion-content padding>
 
     <ion-card padding>
-        <ion-card-header>Christian</ion-card-header>
-        <ion-card-title>
-            I want to become a successful entrepreneur and achieve a 1.0 in the exam
+        <ion-card-header>{{data[i].n}}</ion-card-header>
+        <ion-card-title padding>
+            {{data[i].d}}
         </ion-card-title>
         <ion-card-content>
-
             <ion-item>
-                Time Matching
+                Time
                 <div style="display: flex;">
-                    <div *ngFor="let i of [0,1,2,3,4,5]">
+                    <div *ngFor="let i of data[i].time">
                         <div class="time-cube"></div>
                     </div>
                 </div>
             </ion-item>
-
             <ion-item>
                 Experience
                 <div style="display: flex;">
-                    <div *ngFor="let i of [0,1,2,3,4,5,6,7,8,9,10]">
+                    <div *ngFor="let i of data[i].exp">
                         <div class="time-cube"></div>
                     </div>
                 </div>
@@ -42,12 +40,12 @@
     <ion-grid>
         <ion-row>
             <ion-col text-center>
-                <button ion-button class="round-button" color="danger" round>
+                <button ion-button class="round-button" color="danger" round (click)="click()">
                     <ion-icon name="close"></ion-icon>
                 </button>
             </ion-col>
             <ion-col text-center>
-                <button ion-button class="round-button" color="secondary" round>
+                <button ion-button class="round-button" color="secondary" round (click)="click()">
                     <ion-icon name="checkmark"></ion-icon>
                 </button>
             </ion-col>
