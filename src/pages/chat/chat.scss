@@ -1,52 +1,11 @@
-page-chat {
-    .list-matches {
+.time-cube{
+    width: 20px;
+    height: 8px;
 
-        .match {
+    border-radius: 2px;
 
-            border: 1px solid lightgrey;
-            padding: 5px;
+    margin-right: 1px;
 
-            display: flex;
-            flex-direction: row;
-            justify-content: space-between;
-            align-items: center;
-
-            .top {
-                padding-bottom: 5px;
-
-                display: flex;
-                flex-direction: row;
-                justify-content: space-around;
-                align-items: center;
-            }
-
-            .middle {
-                padding: 10px 5px;
-            }
-
-            .bottom {
-                .time, .experience {
-                    display: flex;
-                    align-items: center;
-
-                    .text {
-                        width: 40px;
-                    }
-
-                    .time-cube{
-                        width: 20px;
-                        height: 8px;
-
-                        border-radius: 2px;
-
-                        margin-right: 1px;
-
-                        border: .5px solid black;
-                        background-color: color($colors, secondary);
-                    }
-                }
-            }
-        }
-
-    }
+    border: .5px solid black;
+    background-color: color($colors, secondary);
 }

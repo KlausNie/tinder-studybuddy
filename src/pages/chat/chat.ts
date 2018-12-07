@@ -33,10 +33,6 @@ export class ChatPage {
     constructor(private toast: ToastController) {
     }
 
-
-  constructor(public navCtrl: NavController) {
-  }
-
   ngOnInit() {
       this.changeCourse(this.subject);
   }
