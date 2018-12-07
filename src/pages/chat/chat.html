@@ -1,0 +1,48 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>
+      Matches
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+
+    <div class="list-matches">
+        <div *ngFor="let d of data" class="match">
+            <div class="text">
+                <div class="top">
+                    <div>
+                        <ion-icon name="bulb"></ion-icon>
+                    </div>
+                    <div class="name">
+                        {{d.n}}
+                    </div>
+                </div>
+                <div class="middle">
+                    <div class="description">
+                        {{d.d}}
+                    </div>
+                </div>
+                <div class="bottom">
+                    <div class="time">
+                        <div class="text">Time: </div>
+                        <div *ngFor="let i of d.time">
+                            <div class="time-cube"></div>
+                        </div>
+                    </div>
+                    <div class="experience">
+                        <div class="text">Exp.: </div>
+                        <div *ngFor="let i of d.exp">
+                            <div class="time-cube"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="action">
+                <button ion-button color="light" (click)="click(d)">Contact</button>
+            </div>
+        </div>
+
+    </div>
+</ion-content>
