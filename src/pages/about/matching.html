@@ -1,0 +1,56 @@
+<ion-header>
+    <ion-navbar>
+        <ion-select [(ngModel)]="subject">
+            <ion-option value="Entrepreneurship">Entrepreneurship</ion-option>
+            <ion-option value="Machine Learning">Machine Learning</ion-option>
+            <ion-option value="Economy">Economy</ion-option>
+        </ion-select>
+    </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+
+    <ion-card padding>
+        <ion-card-header>Christian</ion-card-header>
+        <ion-card-title>
+            I want to become a successful entrepreneur and achieve a 1.0 in the exam
+        </ion-card-title>
+        <ion-card-content>
+
+            <ion-item>
+                Time Matching
+                <div style="display: flex;">
+                    <div *ngFor="let i of [0,1,2,3,4,5]">
+                        <div class="time-cube"></div>
+                    </div>
+                </div>
+            </ion-item>
+
+            <ion-item>
+                Experience
+                <div style="display: flex;">
+                    <div *ngFor="let i of [0,1,2,3,4,5,6,7,8,9,10]">
+                        <div class="time-cube"></div>
+                    </div>
+                </div>
+            </ion-item>
+        </ion-card-content>
+    </ion-card>
+
+</ion-content>
+<ion-footer>
+    <ion-grid>
+        <ion-row>
+            <ion-col text-center>
+                <button ion-button class="round-button" color="danger" round>
+                    <ion-icon name="close"></ion-icon>
+                </button>
+            </ion-col>
+            <ion-col text-center>
+                <button ion-button class="round-button" color="secondary" round>
+                    <ion-icon name="checkmark"></ion-icon>
+                </button>
+            </ion-col>
+        </ion-row>
+    </ion-grid>
+</ion-footer>
