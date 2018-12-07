@@ -9,20 +9,24 @@
 <ion-content padding>
 
     <div class="list-matches">
-        <div *ngFor="let d of data" class="match">
+
+        <ion-card>
+            <ion-select [(ngModel)]="subject" value="Computer Science" (ngModelChange)="changeCourse($event)">
+                <ion-option value="Entrepreneurship">Entrepreneurship</ion-option>
+                <ion-option value="Machine Learning">Machine Learning</ion-option>
+                <ion-option value="Economy">Economy</ion-option>
+            </ion-select>
+        </ion-card>
+
+        <ion-card *ngFor="let d of values" class="match">
             <div class="text">
                 <div class="top">
-                    <div>
-                        <ion-icon name="bulb"></ion-icon>
-                    </div>
                     <div class="name">
                         {{d.n}}
                     </div>
                 </div>
                 <div class="middle">
-                    <div class="description">
-                        {{d.d}}
-                    </div>
+                    {{d.d}}
                 </div>
                 <div class="bottom">
                     <div class="time">
@@ -42,7 +46,7 @@
             <div class="action">
                 <button ion-button color="light" (click)="click(d)">Contact</button>
             </div>
-        </div>
+        </ion-card>
 
     </div>
 </ion-content>
