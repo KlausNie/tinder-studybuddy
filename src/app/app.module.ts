@@ -4,12 +4,15 @@ import { IonicApp, IonicModule, IonicErrorHandler, ToastController } from 'ionic
 import { MyApp } from './app.component';
 
 import { AboutPage } from '../pages/about/about';
+
 import { ChatPage } from '../pages/chat/chat';
-import { HomePage } from '../pages/home/home';
+import { ProfilePage } from '../pages/profile/profile';
+
 import { TabsPage } from '../pages/tabs/tabs';
 
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
+import { CalendarButtonComponent } from '../components/calendarbutton/calendarbutton';
 
 @NgModule({
   declarations: [
@@ -17,7 +20,8 @@ import { SplashScreen } from '@ionic-native/splash-screen';
     AboutPage,
     ChatPage,
     HomePage,
-    TabsPage
+    TabsPage,
+    ProfilePage
   ],
   imports: [
     BrowserModule,
@@ -29,7 +33,8 @@ import { SplashScreen } from '@ionic-native/splash-screen';
     AboutPage,
     ChatPage,
     HomePage,
-    TabsPage
+    TabsPage,
+    ProfilePage
   ],
   providers: [
     StatusBar,
