@@ -3,7 +3,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { IonicApp, IonicModule, IonicErrorHandler, ToastController } from 'ionic-angular';
 import { MyApp } from './app.component';
 
-import { AboutPage } from '../pages/about/about';
+import {MatchingPage} from '../pages/about/matching';
 
 import { ChatPage } from '../pages/chat/chat';
 import { ProfilePage } from '../pages/profile/profile';
@@ -17,11 +17,11 @@ import { CalendarButtonComponent } from '../components/calendarbutton/calendarbu
 @NgModule({
   declarations: [
     MyApp,
-    AboutPage,
+    MatchingPage,
     ChatPage,
-    HomePage,
     TabsPage,
-    ProfilePage
+    ProfilePage,
+    CalendarButtonComponent
   ],
   imports: [
     BrowserModule,
@@ -30,9 +30,8 @@ import { CalendarButtonComponent } from '../components/calendarbutton/calendarbu
   bootstrap: [IonicApp],
   entryComponents: [
     MyApp,
-    AboutPage,
+    MatchingPage,
     ChatPage,
-    HomePage,
     TabsPage,
     ProfilePage
   ],
@@ -43,4 +42,5 @@ import { CalendarButtonComponent } from '../components/calendarbutton/calendarbu
     {provide: ErrorHandler, useClass: IonicErrorHandler}
   ]
 })
-export class AppModule {}
+export class AppModule {
+}
