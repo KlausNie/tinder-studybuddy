@@ -11,6 +11,7 @@ export class ProfilePage {
   studilevel = 0;
   course = "";
   courses = []
+  segments: string = "calendar";
 
   constructor(public navCtrl: NavController,
     public alertCtrl: AlertController) {
